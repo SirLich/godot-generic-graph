@@ -3,10 +3,13 @@
 [ext_resource type="Script" path="res://addons/generic_graph/editor/generic_graph_edit.gd" id="1_b4lia"]
 
 [node name="GenericGraphEdit" type="GraphEdit"]
-unique_name_in_owner = true
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+scroll_offset = Vector2(-1152, -648)
 script = ExtResource("1_b4lia")
 
 [node name="_connection_layer2" type="Control" parent="."]
@@ -33,3 +36,7 @@ text = "save
 [node name="CloseButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "close"
+
+[connection signal="popup_request" from="." to="." method="_on_popup_request"]
+[connection signal="button_up" from="HBoxContainer/SaveButton" to="." method="_on_save_button_button_up"]
+[connection signal="button_up" from="HBoxContainer/CloseButton" to="." method="_on_close_button_button_up"]
