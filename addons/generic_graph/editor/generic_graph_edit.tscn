@@ -1,25 +1,19 @@
-[gd_scene format=3 uid="uid://dxnpuag62p2cc"]
+[gd_scene load_steps=2 format=3 uid="uid://dxnpuag62p2cc"]
 
-[node name="GraphEditContainer" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
+[ext_resource type="Script" path="res://addons/generic_graph/editor/generic_graph_edit.gd" id="1_b4lia"]
 
-[node name="GraphEdit" type="GraphEdit" parent="."]
+[node name="GenericGraphEdit" type="GraphEdit"]
 unique_name_in_owner = true
-layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
 mouse_filter = 2
+script = ExtResource("1_b4lia")
 
-[node name="_connection_layer2" type="Control" parent="GraphEdit"]
+[node name="_connection_layer2" type="Control" parent="."]
 anchors_preset = 0
 mouse_filter = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GraphEdit"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 54.0
@@ -27,21 +21,15 @@ offset_right = 619.0
 offset_bottom = 90.0
 metadata/_edit_group_ = true
 
-[node name="Title" type="Label" parent="GraphEdit/HBoxContainer"]
+[node name="Title" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 text = "NO GRAPH SELECTED"
 
-[node name="SaveButton" type="Button" parent="GraphEdit/HBoxContainer"]
+[node name="SaveButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "save
 "
 
-[node name="CloseButton" type="Button" parent="GraphEdit/HBoxContainer"]
+[node name="CloseButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 text = "close"
-
-[node name="NoGraphLabel" type="Label" parent="."]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 40
-text = "SELECT A GRAPH TO EDIT"
