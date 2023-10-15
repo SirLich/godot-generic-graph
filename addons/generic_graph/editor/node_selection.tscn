@@ -55,3 +55,5 @@ placeholder_text = "Filter..."
 [node name="Tree" type="Tree" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+
+[connection signal="item_activated" from="MarginContainer/VBoxContainer/Tree" to="." method="_on_tree_item_activated"]
