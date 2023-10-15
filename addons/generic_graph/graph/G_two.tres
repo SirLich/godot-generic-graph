@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="StepGraph" load_steps=2 format=3 uid="uid://conf6rv87x345"]
 
-[ext_resource type="Script" path="res://step_graph.gd" id="1_s2qea"]
+[ext_resource type="Script" path="res://addons/generic_graph/graph/generic_graph.gd" id="1_s2qea"]
 
 [resource]
 script = ExtResource("1_s2qea")

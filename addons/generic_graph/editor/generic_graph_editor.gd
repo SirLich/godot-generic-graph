@@ -1,6 +1,6 @@
 @tool
 extends Control
-class_name StepGraphEditor
+class_name GenericGraphEditor
 
 @export var step_selection_prototype : PackedScene
 @onready var title: Label = $MarginContainer/GraphEdit/Title

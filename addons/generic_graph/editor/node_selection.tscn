@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmkx6darlsxsn"]
 
-[ext_resource type="Texture2D" uid="uid://dtjy3rgq86i57" path="res://nine_patch.png" id="1_shttk"]
-[ext_resource type="Texture2D" uid="uid://l0grolcnnpkh" path="res://skull.png" id="2_x5nlp"]
+[ext_resource type="Texture2D" uid="uid://dtjy3rgq86i57" path="res://addons/generic_graph/editor/assets/nine_patch.png" id="1_3n763"]
+[ext_resource type="Texture2D" uid="uid://l0grolcnnpkh" path="res://addons/generic_graph/editor/assets/skull.png" id="2_em8rk"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 8
@@ -19,7 +19,7 @@ grow_vertical = 2
 [node name="Background" type="NinePatchRect" parent="."]
 self_modulate = Color(0.215686, 0.215686, 0.215686, 1)
 layout_mode = 2
-texture = ExtResource("1_shttk")
+texture = ExtResource("1_3n763")
 patch_margin_left = 20
 patch_margin_top = 20
 patch_margin_right = 20
@@ -49,6 +49,6 @@ item_count = 2
 icon_scale = 0.2
 fixed_icon_size = Vector2i(64, 64)
 item_0/text = "Test"
-item_0/icon = ExtResource("2_x5nlp")
+item_0/icon = ExtResource("2_em8rk")
 item_1/text = "Another one"
-item_1/icon = ExtResource("2_x5nlp")
+item_1/icon = ExtResource("2_em8rk")

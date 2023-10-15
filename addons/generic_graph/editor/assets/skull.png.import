@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtjy3rgq86i57"
-path="res://.godot/imported/nine_patch.png-2ad702e41118ab4e8e13b8366ee23217.ctex"
+uid="uid://l0grolcnnpkh"
+path="res://.godot/imported/skull.png-cebeb7689cb1ed9682a08507e78b8cb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nine_patch.png"
-dest_files=["res://.godot/imported/nine_patch.png-2ad702e41118ab4e8e13b8366ee23217.ctex"]
+source_file="res://addons/generic_graph/editor/assets/skull.png"
+dest_files=["res://.godot/imported/skull.png-cebeb7689cb1ed9682a08507e78b8cb3.ctex"]
 
 [params]
 
