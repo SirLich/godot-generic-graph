@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://3en6rr6heuch"]
+[gd_scene load_steps=4 format=3 uid="uid://3en6rr6heuch"]
 
 [ext_resource type="Script" path="res://addons/generic_graph/editor/generic_graph_editor.gd" id="1_q7q3u"]
 [ext_resource type="PackedScene" uid="uid://cmkx6darlsxsn" path="res://addons/generic_graph/editor/node_selection.tscn" id="2_f1d6i"]
+[ext_resource type="PackedScene" uid="uid://dxnpuag62p2cc" path="res://addons/generic_graph/editor/generic_graph_edit.tscn" id="3_h20aw"]
 
-[node name="StepGraphEditorInstance" type="Control"]
+[node name="GenericGraphEditorInstance" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,57 +15,10 @@ mouse_filter = 2
 script = ExtResource("1_q7q3u")
 selector_prototype = ExtResource("2_f1d6i")
 
-[node name="GraphEditContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
-
-[node name="GraphEdit" type="GraphEdit" parent="GraphEditContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-scroll_offset = Vector2(-817, 0)
-
-[node name="Title" type="Label" parent="GraphEditContainer/GraphEdit"]
+[node name="GraphEditContainer" parent="." instance=ExtResource("3_h20aw")]
 layout_mode = 0
-offset_left = 320.0
-offset_top = 15.0
-offset_right = 467.0
-offset_bottom = 38.0
-text = "NO GRAPH SELECTED"
-
-[node name="GraphNode" type="GraphNode" parent="GraphEditContainer/GraphEdit"]
-layout_mode = 0
-offset_left = 1049.0
-offset_top = 154.0
-offset_right = 1199.0
-offset_bottom = 224.0
-mouse_filter = 1
-position_offset = Vector2(232, 154)
-title = "Title"
-slot/0/left_enabled = true
-slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
-slot/0/left_icon = null
-slot/0/right_enabled = false
-slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
-slot/0/right_icon = null
-slot/0/draw_stylebox = true
-
-[node name="Control" type="Control" parent="GraphEditContainer/GraphEdit/GraphNode"]
-layout_mode = 2
-
-[node name="NoGraphLabel" type="Label" parent="GraphEditContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 40
-text = "SELECT A GRAPH TO EDIT"
-
-[connection signal="gui_input" from="GraphEditContainer/GraphEdit" to="." method="_on_graph_edit_gui_input"]
-[connection signal="popup_request" from="GraphEditContainer/GraphEdit" to="." method="_on_graph_edit_popup_request"]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
