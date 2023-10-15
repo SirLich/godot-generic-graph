@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3en6rr6heuch"]
 
-[ext_resource type="Script" path="res://addons/generic_graph/editor/generic_graph_editor.gd" id="1_w2pll"]
-[ext_resource type="PackedScene" uid="uid://cmkx6darlsxsn" path="res://addons/generic_graph/editor/node_selection.tscn" id="2_ijbau"]
+[ext_resource type="Script" path="res://addons/generic_graph/editor/generic_graph_editor.gd" id="1_q7q3u"]
+[ext_resource type="PackedScene" uid="uid://cmkx6darlsxsn" path="res://addons/generic_graph/editor/node_selection.tscn" id="2_f1d6i"]
 
 [node name="StepGraphEditorInstance" type="Control"]
 layout_mode = 3
@@ -11,8 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("1_w2pll")
-step_selection_prototype = ExtResource("2_ijbau")
+script = ExtResource("1_q7q3u")
+step_selection_prototype = ExtResource("2_f1d6i")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

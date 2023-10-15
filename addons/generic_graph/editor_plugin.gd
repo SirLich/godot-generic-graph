@@ -11,14 +11,11 @@ func _make_visible(visible: bool) -> void:
 	print("Make Visible")
 	
 func _edit(object: Object) -> void:
-	print("Hello World")
-	print(object)
-	if object is StepGraph:
+	if object is GenericGraph:
 		graph_editor.start_editing_asset(object)
 	
 func _handles(object: Object) -> bool:
-	print(object)
-	if object is StepGraph:
+	if object is GenericGraph:
 		return true
 	return false
 	
