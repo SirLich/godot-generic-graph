@@ -12,9 +12,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_q7q3u")
-step_selection_prototype = ExtResource("2_f1d6i")
+selector_prototype = ExtResource("2_f1d6i")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="GraphEditContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,22 +25,24 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
-[node name="GraphEdit" type="GraphEdit" parent="MarginContainer"]
+[node name="GraphEdit" type="GraphEdit" parent="GraphEditContainer"]
+unique_name_in_owner = true
 layout_mode = 2
+scroll_offset = Vector2(-817, 0)
 
-[node name="Title" type="Label" parent="MarginContainer/GraphEdit"]
+[node name="Title" type="Label" parent="GraphEditContainer/GraphEdit"]
 layout_mode = 0
 offset_left = 320.0
 offset_top = 15.0
 offset_right = 467.0
 offset_bottom = 38.0
-text = "EXAMPLE"
+text = "NO GRAPH SELECTED"
 
-[node name="GraphNode" type="GraphNode" parent="MarginContainer/GraphEdit"]
+[node name="GraphNode" type="GraphNode" parent="GraphEditContainer/GraphEdit"]
 layout_mode = 0
-offset_left = 232.0
+offset_left = 1049.0
 offset_top = 154.0
-offset_right = 382.0
+offset_right = 1199.0
 offset_bottom = 224.0
 mouse_filter = 1
 position_offset = Vector2(232, 154)
@@ -55,8 +57,14 @@ slot/0/right_color = Color(1, 1, 1, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
 
-[node name="Control" type="Control" parent="MarginContainer/GraphEdit/GraphNode"]
+[node name="Control" type="Control" parent="GraphEditContainer/GraphEdit/GraphNode"]
 layout_mode = 2
 
-[connection signal="gui_input" from="MarginContainer/GraphEdit" to="." method="_on_graph_edit_gui_input"]
-[connection signal="popup_request" from="MarginContainer/GraphEdit" to="." method="_on_graph_edit_popup_request"]
+[node name="NoGraphLabel" type="Label" parent="GraphEditContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "SELECT A GRAPH TO EDIT"
+
+[connection signal="gui_input" from="GraphEditContainer/GraphEdit" to="." method="_on_graph_edit_gui_input"]
+[connection signal="popup_request" from="GraphEditContainer/GraphEdit" to="." method="_on_graph_edit_popup_request"]
