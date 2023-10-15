@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GenericGraphNode" load_steps=2 format=3 uid="uid://dhrypu38dj50x"]
+
+[ext_resource type="Script" path="res://addons/generic_graph/node/generic_graph_node.gd" id="1_3gola"]
+
+[resource]
+script = ExtResource("1_3gola")
+name = ""
