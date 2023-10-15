@@ -36,5 +36,27 @@ offset_right = 467.0
 offset_bottom = 38.0
 text = "EXAMPLE"
 
+[node name="GraphNode" type="GraphNode" parent="MarginContainer/GraphEdit"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 154.0
+offset_right = 382.0
+offset_bottom = 224.0
+mouse_filter = 1
+position_offset = Vector2(232, 154)
+title = "Title"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+
+[node name="Control" type="Control" parent="MarginContainer/GraphEdit/GraphNode"]
+layout_mode = 2
+
 [connection signal="gui_input" from="MarginContainer/GraphEdit" to="." method="_on_graph_edit_gui_input"]
 [connection signal="popup_request" from="MarginContainer/GraphEdit" to="." method="_on_graph_edit_popup_request"]

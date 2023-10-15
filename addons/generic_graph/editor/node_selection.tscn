@@ -1,9 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmkx6darlsxsn"]
+[gd_scene load_steps=4 format=3 uid="uid://cmkx6darlsxsn"]
 
 [ext_resource type="Script" path="res://addons/generic_graph/editor/node_selection.gd" id="1_0767v"]
 [ext_resource type="Texture2D" uid="uid://dtjy3rgq86i57" path="res://addons/generic_graph/editor/assets/nine_patch.png" id="1_t6cn6"]
 
-[node name="NodeSelection" type="MarginContainer"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjq2n"]
+texture = ExtResource("1_t6cn6")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[node name="NodeSelection" type="PanelContainer"]
+self_modulate = Color(0, 0.631373, 0.839216, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -15,16 +23,8 @@ offset_right = 149.0
 offset_bottom = 144.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tjq2n")
 script = ExtResource("1_0767v")
-
-[node name="Background" type="NinePatchRect" parent="."]
-self_modulate = Color(0.215686, 0.215686, 0.215686, 1)
-layout_mode = 2
-texture = ExtResource("1_t6cn6")
-patch_margin_left = 20
-patch_margin_top = 20
-patch_margin_right = 20
-patch_margin_bottom = 20
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -55,5 +55,6 @@ placeholder_text = "Filter..."
 [node name="Tree" type="Tree" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+hide_root = true
 
 [connection signal="item_activated" from="MarginContainer/VBoxContainer/Tree" to="." method="_on_tree_item_activated"]

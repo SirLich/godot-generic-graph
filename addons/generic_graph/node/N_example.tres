@@ -1,7 +1,29 @@
-[gd_resource type="Resource" script_class="GenericGraphNode" load_steps=2 format=3 uid="uid://dhrypu38dj50x"]
+[gd_resource type="Resource" script_class="GenericGraphNode" load_steps=5 format=3 uid="uid://dhrypu38dj50x"]
 
 [ext_resource type="Script" path="res://addons/generic_graph/node/generic_graph_node.gd" id="1_3gola"]
+[ext_resource type="Script" path="res://addons/generic_graph/node/generic_graph_slot.gd" id="2_jyj5l"]
+
+[sub_resource type="Resource" id="Resource_hdh0v"]
+script = ExtResource("2_jyj5l")
+left_enabled = true
+left_type = 0
+left_color = Color(1, 1, 1, 1)
+right_enabled = true
+right_type = 0
+right_color = Color(1, 1, 1, 1)
+draw_stylebox = true
+
+[sub_resource type="Resource" id="Resource_f6qu3"]
+script = ExtResource("2_jyj5l")
+left_enabled = true
+left_type = 0
+left_color = Color(1, 1, 1, 1)
+right_enabled = true
+right_type = 0
+right_color = Color(1, 1, 1, 1)
+draw_stylebox = true
 
 [resource]
 script = ExtResource("1_3gola")
-name = ""
+name = "My Node"
+slots = Array[ExtResource("2_jyj5l")]([SubResource("Resource_hdh0v"), SubResource("Resource_f6qu3")])

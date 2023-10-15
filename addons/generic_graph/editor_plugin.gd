@@ -21,7 +21,7 @@ func _handles(object: Object) -> bool:
 	
 func _enter_tree() -> void:
 	graph_editor = graph_editor_prototype.instantiate()
-	add_control_to_bottom_panel(graph_editor, "Step Graph")
+	add_control_to_bottom_panel(graph_editor, "Generic Graph")
 	
 func _exit_tree() -> void:
 	remove_control_from_bottom_panel(graph_editor)
