@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmkx6darlsxsn"]
+
+[ext_resource type="Texture2D" uid="uid://dtjy3rgq86i57" path="res://nine_patch.png" id="1_shttk"]
+[ext_resource type="Texture2D" uid="uid://l0grolcnnpkh" path="res://skull.png" id="2_x5nlp"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -144.5
+offset_right = 149.0
+offset_bottom = 144.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="NinePatchRect" parent="."]
+self_modulate = Color(0.215686, 0.215686, 0.215686, 1)
+layout_mode = 2
+texture = ExtResource("1_shttk")
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Hello world"
+
+[node name="ItemList" type="ItemList" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+auto_height = true
+item_count = 2
+icon_scale = 0.2
+fixed_icon_size = Vector2i(64, 64)
+item_0/text = "Test"
+item_0/icon = ExtResource("2_x5nlp")
+item_1/text = "Another one"
+item_1/icon = ExtResource("2_x5nlp")

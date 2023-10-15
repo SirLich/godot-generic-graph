@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://3en6rr6heuch"]
+
+[ext_resource type="Script" path="res://addons/step_system/step_graph_editor.gd" id="1_kis7n"]
+[ext_resource type="PackedScene" uid="uid://cmkx6darlsxsn" path="res://addons/step_system/step_selection.tscn" id="2_lce1m"]
+
+[node name="StepGraphEditorInstance" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_kis7n")
+step_selection_prototype = ExtResource("2_lce1m")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="GraphEdit" type="GraphEdit" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/GraphEdit"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 15.0
+offset_right = 467.0
+offset_bottom = 38.0
+text = "EXAMPLE"
+
+[connection signal="gui_input" from="MarginContainer/GraphEdit" to="." method="_on_graph_edit_gui_input"]
+[connection signal="popup_request" from="MarginContainer/GraphEdit" to="." method="_on_graph_edit_popup_request"]
